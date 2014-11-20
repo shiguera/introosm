@@ -6,7 +6,7 @@
 
 		<title>OpenStreetMap</title>
 
-		<meta name="description" content="Introducción a OpenStreetMap. Taller de edición de OSM, Medialab, Mayo 2013">
+		<meta name="description" content="Introducción a OpenStreetMap. Taller de edición de OSM, UPM, Mayo 2013">
 		<meta name="author" content="Santiago Higuera">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -61,7 +61,7 @@
 
 			<aside class="notes">
 				Presentación para el taller de edición de OSM
-				en Medialab el 31 de Mayo de 2013
+				en la UPM - Topografía 20 de noviembre de 2014
 			</aside>
 
 			<!-- Any section element inside of this container is displayed as a slide -->
@@ -69,208 +69,71 @@
 
 				<!-- 1.- Portada -->
 				<section>
-					<h1>OpenStreetMap</h1>
-					<h3>El mapa mundi colaborativo</h3>
-					<p>
-						<small>Created by <a href="https://twitter.com/santiagohiguera">Santiago Higuera</a> /
-						<a href="https://twitter.com/santiagohiguera">@SantiagoHiguera</a></small>
-					</p>
+					<div style='float: left; width: 420px'>
+						<img src="img/universe.jpg" alt='universe' width='420px'>
+					</div>
+					<div style='float: left; margin-top: 30px; margin-right: 20px; width: 420px'>
+						<h2 style='color=#1100cc'>OpenStreetMap</h2>
+						<h3>El mapa mundi colaborativo</h3>
+						<p><br><br><br><small>by <a href="https://twitter.com/santiagohiguera">@SantiagoHiguera</a></small></p>
+					</div>
+
 				</section>
 
 				<!-- 2.- ¿Qué es OpenStreetMap? -->
 				<section>
 					<h2>¿Qué es OpenStreetMap?</h2>
-					<p>
-						<strong>OpenStreetMap</strong> es un mapa callejero gratuito de todo el mundo, 
-						creado por una creciente comunidad de entusiastas de los mapas.
-					</p>
+					<p><strong>OpenStreetMap</strong> es una base de datos de información geográfica de todo el planeta creada y mantenida de forma voluntaria y colaborativa por una creciente comunidad de entusiastas de los mapas.</p>
 					<br/>
-					<p>
-						<strong>OpenStreetMap</strong> es una herramienta para crear y compartir información cartográfica. 
-						Cualquiera puede contribuir a OSM, y miles de personas se suman al proyecto cada día. 
+					<p>Los datos contenidos en las bases de datos de <strong>OpenStreetMap</strong> son de acceso libre y gratuito.</p>
+				</section>
+				<section>
+					<h3>Componentes de la información geográfica</h3>
+					<p><strong>Componente espacial</strong>: La localización y la geometría de los elementos que aparecen el el mapa. Es la que hace que la información sea calificada como <em>geográfica</em></p>
+					<p><strong>Componente temática</strong>: La naturaleza y las características particulares de los elementos que aparecen en el mapa. Responde a la preguna <strong>¿Qué es?</strong></p>
+				</section>	
+				<section>
+					<h3>Geometrías de OpenStreetMap</h3>
+					<p>Los elementos básicos del mapa de OpenStreetMap son:</p>
+						<ul>
+							<li><strong>Nodes</strong>: Un nodo es un punto</li>
+							<li><strong>Ways</strong>: Un way es una polilínea</li>
+						</ul>
+						<p>Si el primer y último punto de una polilínea coinciden, la polilínea será cerrada</p>
+						<p>No existen líneas curvas, se hacen a base de polilíneas</p> 
 					</p>
-					<br/>
-					<p>
-						Lo más importante de los mapas de <strong>OpenStreetMap</strong> es que son totalmente libres y gratuitos.
-					</p>
 				</section>
-
-				<!-- ¿Cómo se accede a OpenStreetMap? -->
 				<section>
-					<h2>¿Cómo se accede a OpenStreetMap?</h2>
-					<p>
-						A través del navegador web, en la dirección:<br/>
-					<center><a href="http://openstreetmap.org">openstreetmap.org</a></center>	
-					</p>
-					<iframe width="1025" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-64.2,-25,71,64.1&amp;layer=mapnik" style="border: 1px solid black"></iframe><br />						
-				</section>
-
-				<section>
-					<h2>¿De qué están hechos los mapas?</h2>
-					<p>Los mapas están hechos de datos geolocalizados</p>
-					<img width="900" src="img/mapadatos.png" alt="datos">	
+					<h3>La componente temática: tags, etiquetas</h3>
+					<p>Los elementos se describen mediante etiquetas, <em>tags</em></p>
+					<p>Las etiquetas son parejas de valores <strong><em>name, value</em></strong></p>
+					<p>Los <em>tags</em> son una pareja <em>Key-Value</em>.</p>
+					<p><em>Key</em> y <em>Value</em> son cadenas de texto de formato libre</p>
+					<p>En la práctica hay convenciones acerca de qué etiquetas utilizar. Algunos ejemplos:</p>
+					<pre><code>
+highway=residential
+name=N-III
+maxspeed=60
+					</code></pre>
 				</section>
 
 				<section>
-					<h2>¿Como?</h2>
-					<img width="500" src="img/marciano.png" alt="datos">	
-				</section>
-
-				<section>
-					<h2>Going vectorial, rendering</h2>
-					<img width="900" src="img/rendering.png" alt="datos">	
-				</section>
-
-
-				<section>
-					<h2>¿Cómo se hacen los mapas?</h2>
-					<p>Se pueden utilizar sofisticados equipos robotizados...</p>
-					<a class="image" href="" target="_blank">
-						<img width="500" height="350" src="img/googlecar.jpeg" alt="openstreetmap.org">
-					</a>
+					<h3>Etiquetas frecuentes</h3>
+					<p><center><a href='http://wiki.openstreetmap.org/wiki/Map_Features' target='_blank'>http://wiki.openstreetmap.org/wiki/Map_Features</a></center></p>
+					<img src="img/tags.png" alt='tags' width='800'>
 				</section>
 				<section>
-					<h2>¿Cómo se hacen los mapas?</h2>
-					<p>... o equipos sencillos manejados por personas inteligentes</p>
-					
-					<a class="image" href="" target="_blank" style="float:left">
-						<img width="470" height="350" src="img/kara.jpg" alt="openstreetmap.org">
-					</a>
-					<a class="image" href="" target="_blank" style="float:left">
-						<img width="470" height="350" src="img/geoinquiets.jpg" alt="openstreetmap.org">
-					</a>
-				</section>
-				
-				<section>
-					<h2>Los resultados no son los mismos</h2>
-					<p>Kara, Togo (África)</p>
-					<iframe width="1025" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://tools.geofabrik.de/mc/?lon=1.19345&lat=9.55295&zoom=14&num=2&mt0=mapnik&mt1=google-map" style="border: 1px solid black"></iframe>
-				</section>
-
-				<section>
-					<h2>Los resultados no son los mismos</h2>
-					<p>La ciudad prohibida de Pekín</p>
-					<iframe width="1025" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://tools.geofabrik.de/mc/?lon=116.39127&lat=39.916&zoom=15&num=2&mt0=mapnik&mt1=google-map" style="border: 1px solid black"></iframe>
-				</section>
-
-				<section>
-					<h2>Los resultados no son los mismos</h2>
-					<p>La otra ciudad prohibida</p>
-					<iframe width="1025" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://tools.geofabrik.de/mc/?lon=-77.05578&lat=38.87123&zoom=16&num=2&mt0=mapnik&mt1=google-map" style="border: 1px solid black"></iframe>
-				</section>
-
-				<section>
-					<h2>Los resultados no son los mismos</h2>
-					<p>Mi pueblo</p>
-					<iframe width="1025" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://tools.geofabrik.de/mc/?lon=-3.96761&lat=40.68085&zoom=17&num=2&mt0=mapnik&mt1=google-map" style="border: 1px solid black"></iframe>
-				</section>
-
-
-
-				<!-- Quién hace OpenStreetMap? -->
-				<section>
-					<h2>¿quién hace OpenStreetMap?</h2>
-					<p>
-						OpenStreetMap está construido con las aportaciones de miles de voluntarios 
-						repartidos por todo el mundo.
-					</p>
-					<iframe width="950" height="515" src="http://www.youtube.com/embed/lpXk5W6b298" frameborder="0" allowfullscreen></iframe>				
+					<h3>Etiquetas frecuentes</h3>
+					<a class="image" href="http://wiki.openstreetmap.org/wiki/Key:building" target="_blank"><img width='200' src="img/keybuilding.png" style="float:left; margin: 10px" alt="building"></a>
+					<a class="image" href="http://wiki.openstreetmap.org/wiki/Key:highway" target="_blank"><img width='200' src="img/keyhighway.png" style="float:left; margin: 10px" alt="highway"></a>
+					<a class="image" href="http://wiki.openstreetmap.org/wiki/Key:amenity" target="_blank"><img width='200' src="img/keyamenity.png" style="float:left; margin: 10px" alt="amenity"></a>
+					<a class="image" href="http://wiki.openstreetmap.org/wiki/Key:amenity" target="_blank"><img width='200' src="img/amenity.png" style="float:left; margin: 10px" alt="amenity"></a>
 				</section>
 				<section>
-					<h2>¿quién hace OpenStreetMap?</h2>
-					<p>1.150.000 usuarios registrados</p>
-					<p>12.000.000.000 track points</p>
-					<p>1.500.000 nuevos nodos añadidos cada día</p>
-					<iframe width="1225" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://osmlab.github.io/show-me-the-way/" style="border: 1px solid black"></iframe>				
-				</section>
-
-
-				<!-- ¿Cómo se financia ? -->
-				<section>
-					<h2>¿Cómo se financia OpenStreetMap</h2>
-					<p>
-						Los fondos necesarios para el mantenimiento de los servidores y redes 
-						de comunicación sale de donaciones voluntarias de particulares y empresas
-					</p>
-					<a class="image" href="http://donate.openstreetmap.org/server2013/" target="_blank">
-						<img width="1020" height="292" src="img/support.png" alt="openstreetmap.org">
-					</a>
-				</section>
-
-
-
-				<section>
-					<h1>¿Qué se puede hacer con OpenStreetMap?</h2>
-					<a class="image" href="http://openstreetmap.org" target="_blank">
-						<img width="600" height="360" src="img/mapa.jpg" alt="openstreetmap.org">
-					</a>
-				</section>
-
-				<section>
-					<h2>Buscar una dirección</h2>
-					<a class="image" href="http://openstreetmap.org" target="_blank">
-						<img width="600" height="360" src="img/buscar.png" alt="openstreetmap.org">
-					</a>
-				</section>
-
-				<section>
-					<h2>Descargarse la imagen o los datos</h2>
-					<ul>
-						<li>Datos OpenStreetMap en formato XML</li>
-						<li>Imagen de mapa</li>						
- 						<li>HTML integrable</li>
-					</ul>
-					<a class="image" href="http://openstreetmap.org" target="_blank">
-						<img width="520" height="292" src="img/start_export_es.png" alt="openstreetmap.org">
-					</a>
-				</section>
-
-				<section>
-					<h2>Pasar un mapa</h2>
-					<a href="http://www.openstreetmap.org/?lat=40.402139872312546&layers=MN&lon=-3.6780810356140137&zoom=17">http://www.openstreetmap.org/?lat=40.4021&lon=-3.6781&layers=MN&zoom=17</a>
-					<a class="image" href="http://openstreetmap.org" target="_blank">
-						<img width="600" height="360" src="img/permalink.png" alt="openstreetmap.org">
-					</a>
-				</section>
-				<section>
-					<h2>Pasar un mapa con marcador</h2>
-					<a href="http://www.openstreetmap.org/?mlat=40.402139872312546&layers=MN&mlon=-3.6780810356140137&zoom=17">http://www.openstreetmap.org/?mlat=40.4021&mlon=-3.6781&layers=MN&zoom=17</a>
-					<a class="image" href="http://openstreetmap.org" target="_blank">
-						<img width="600" height="360" src="img/marker.png" alt="openstreetmap.org">
-					</a>
-				</section>
-				<section>
-					<h2>Marcar un rectángulo</h2>
-					<a href="http://www.openstreetmap.org/?minlon=-3.0&minlat=40.0&maxlon=-4.5&maxlat=41.0&box=yes">http://www.openstreetmap.org/?minlon=-3.0&minlat=40.0&maxlon=-4.5&maxlat=41.0&box=yes</a>
-					<a class="image" href="http://openstreetmap.org" target="_blank">
-						<img width="600" height="360" src="img/bbox.png" alt="openstreetmap.org">
-					</a>
-				</section>
-				<section>
-					<h2>Rectángulo más marcador</h2>
-					<a href="http://www.openstreetmap.org/?minlon=-3.0&minlat=40.0&maxlon=-4.5&maxlat=41.0&box=yes&mlat=40.7&mlon=-3.98">minlon=-3.0&minlat=40.0 ... &box=yes&mlat=40.7&mlon=-3.98</a>
-					<a class="image" href="http://openstreetmap.org" target="_blank">
-						<img width="600" height="360" src="img/boxmarker.png" alt="openstreetmap.org">
-					</a>
-				</section>
-
-
-
-				<section>
-					<h2>Material de aprendizaje</h2>
-					<a href="http://learnosm.org">http://learnosm.org</a><br>
-					<a href="http://learnosm.org/es/beginner/">http://learnosm.org/es/beginner/</a>
-				</section>
-
-
-				<!-- 6.- Darse de alta como usuario -->
-				<section>
-					<h2>Darse de alta como usuario registrado de OpenStreetMap</h2>
-					<p>Para poder editar los mapas es necesario registrarse como usuario</p>
-					<a class="image" href="http://openstreetmap.org/" target="_blank">
-						<img width="730" src="img/alta.png" alt="josm">
-					</a>
-
+					<h3>Áreas, relations y polígonos</h3>
+					<p><strong>Aŕeas</strong>: Es una polilínea cerrada con la etiqueta <em>area</em></p>
+					<p><strong>Relations</strong>: Composiciones en base a elementos simples</p>
+					<p><strong>Polygon</strong>: Relation reconocida por los renders. Permite dibujar áreas con agujeros, por ejemplo, edificios.</p>
 				</section>
 
 				<section>
@@ -280,218 +143,191 @@
 					</a>
 				</section>
 
-				<!-- El modelo de datos -->
+				<!-- ¿Cómo se accede a OpenStreetMap? -->
 				<section>
-					<h2>Modelo de datos</h2>
-					<p>La información de OSM está compuesta de <em>elementos</em> que, a su vez, pueden ser del tipo:</p>
-					<ul>
-						<li>Node : Puntos</li>
-						<li>Way : Líneas</li>
-						<li>Relation : Relaciones</li>
-					</ul>
-					<p>Cada elemento llevará asociada, además de las coordenadas y otros datos, información en forma de etiquetas, <em>tags</em>, <em>Key-Value</em></p>
-					<pre><code></code></pre>
-				</section>
-
-				<!-- El formato OSM XML -->
-				<section>
-					<h2>EL formato OSM XML</h2>
-					<pre><code>
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;osm version="0.6" generator="CGImap 0.0.2"&gt;
-	&lt;bounds minlat="54.0889580" minlon="12.2487570" 
-		maxlat="54.0913900" maxlon="12.2524800"/&gt;
- 		&lt;node&gt;...&lt;/node&gt;
- 		&lt;way&gt;...&lt;/way&gt;
- 		&lt;relation&gt;...&lt;/relation&gt;
-&lt;/osm&gt;
-					</code></pre>
-				</section>
-
-				<!-- Tags -->
-				<section>
-					<h2>Tags, etiquetas</h2>
-					<p>Los elementos se describen mediante etiquetas, <em>tags</em></p>
-					<p>Los <em>tags</em> son una pareja <em>Key-Value</em>.</p>
-					<p><em>Key</em> y <em>Value</em> son cadenas de texto de formato libre</p>
-					<p>En la práctica hay convenciones acerca de qué etiquetas utilizar. Algunos ejemplos:</p>
-					<pre><code>
-highway=residential
-name=N-III
-maxspeed=60
-					</code></pre>
-					<p>Las etiquetas más comunes se pueden consultar en:<br/>
-						<center><a href='http://wiki.openstreetmap.org/wiki/Map_Features' target='_blank'>MapFeatures</a></center></p>
-				</section>
-
-				<section>
-					<h3>Etiquetas frecuentes</h3>
-					<a class="image" href="http://wiki.openstreetmap.org/wiki/Key:building" target="_blank">
-						<img src="img/keybuilding.png" style="float:left; margin: 10px" alt="building">
-					</a>
-					<a class="image" href="http://wiki.openstreetmap.org/wiki/Key:highway" target="_blank">
-						<img src="img/keyhighway.png" style="float:left; margin: 10px" alt="highway">
-					</a>
-					<a class="image" href="http://wiki.openstreetmap.org/wiki/Key:amenity" target="_blank">
-						<img src="img/keyamenity.png" style="float:left; margin: 10px" alt="amenity">
-					</a>
-				</section>
-
-				<!-- Node -->
-				<section data-background="#ff0000">
-					<h2>Node</h2>
-					<p>Los <em>Nodos</em> se pueden utilizar para representar una característica espacial individual, por ejemplo una cabina de teléfono, o como componente de un elemento <em>Way</em> o <em>Relation</em></p>
-					<pre><code>
-&lt;node id="25496583" lat="51.5173639" lon="-0.140043" 
-	version="1" changeset="203496" user="80n" uid="1238" 
-	visible="true" timestamp="2007-01-28T11:40:26Z"&gt;
-		&lt;tag k="highway" v="traffic_signals"/&gt;
-&lt;/node&gt;
-					</code></pre>
-				</section>
-
-				<!-- Way -->
-				<section>
-					<h2>Way</h2>
-					<p>Los elementos tipo <em>Way</em> son una colección ordenada de entre 2 y 2.000 nodos</p>
-					<p>Un elemento <em>way</em> tendrá al menos una etiqueta, <em>tag</em> o pertenecerá a una relación</p>
-					<p>Un elemento <em>Way</em> puede representar una polilínea abierta, una polilínea cerrada o un área</p>
-				</section>
-
-				<section>
-					<h2>Ejemplo de <em>way</em></h2>
-					<pre><code>
-&lt;way id="5090250" visible="true" timestamp="2009-01-19T19:07:25Z" 
-	version="8" changeset="816806" user="Blumpsy" uid="64226"&gt;
-    &lt;nd ref="822403"/&gt;
-    &lt;nd ref="21533912"/&gt;
-    &lt;nd ref="821601"/&gt;
-    &lt;nd ref="21533910"/&gt;
-    &lt;nd ref="135791608"/&gt;
-    &lt;nd ref="333725784"/&gt;
-    &lt;tag k="highway" v="residential"/&gt;
-    &lt;tag k="name" v="Clipstone Street"/&gt;
-    &lt;tag k="oneway" v="yes"/&gt;
-  &lt;/way&gt;
-					</code></pre>
-				</section>
-				<section>
-					<h2>Polilínea abierta</h2>
-					<p>Es un elemento tipo <em>way</em> en el que los puntos inicial y final no coinciden</p>
-					<p>Se utilizan para representar <em>features</em> lineales como pueden ser las carreteras, los ríos, las vías de tren y otras</p>
-				</section>
-
-				<section>
-					<h2>Polilínea cerrada</h2>
-					<p>Una polilínea cerrada se representa mediante un elemento <em>way</em> en el que coinciden el nodo inicial y el final</p>
-					<p>Se pueden utilizar para representar edificios, glorietas y otros</p>
-				</section>
-
-				<section>
-					<h2>Áreas y polígonos</h2>
-					<p>Son elementos <em>way</em> en los que coinciden el punto inicial y final y que además tienen alguna etiqueta que lo define como un área o polígono</p>
-					<p>Se utilizan para representar áreas de terreno con una finalidad especial, como puede ser un parque, por ejemplo</em></p>
-					<p>Una etiqueta <em>area=yes</em> define una polilínea cerrada como area, pero también hay otras, por ejemplo <em>leisure=park</em> o <em>amenity=school</em></p>
-				</section>
-
-				<!-- Relation -->
-				<section>
-					<h2>Relation</h2>
-					<p>Una <em>Relation</em> es un elemento complejo que consta de una serie de etiquetas y una colección ordenada de elementos <em>Node</em> o elementos <em>Way</em>, cada uno de los cuales puede tener asignado un <em>Role</em></p>
-					<p>Se utilizan para describir Multi-polígonos o Rutas de transporte público, por ejemplo</p>
-					<p>Algunas de las <em>relations</em> aceptadas son: <em>multipolygon, route y waterway</em></p>
-				</section>
-
-				<section>
-					<h2>Ejemplo de <em>relation</em></h2>
-					<div style='float:left; width:550px'>
-						<pre><code>
-&lt;relation id="1"&gt;
-  &lt;tag k="type" v="multipolygon" /&gt;
-  &lt;member type="way" id="1" role="outer" /&gt;
-  &lt;member type="way" id="2" role="inner" /&gt;
-  &lt;member type="way" id="3" role="inner" /&gt;
-&lt;/relation&gt;
-					</code></pre>
-				</div>
-				<img src='img/multipolygon.png' width='400'>
-				</section>
-				<!-- Enlaces de interés en OSM -->
-				<section>
-					<h2>Algunos enlaces de interés</h2>
-					<ul>
-						<li><a href='http://wiki.openstreetmap.org/wiki/Statistics' target='_blank'>Estadísticas de la base de datos OSM</a></li>
-						<li><a href='http://wiki.openstreetmap.org/wiki/Map_Features' target='_blank'>Map Features</a></li>
-						<li><a href='http://wiki.openstreetmap.org/wiki/Types_of_relation' target='_blank'>Tipos de <em>relation</em></a></li>
-				</section>
-
-				<!-- Rendering -->
-				<section>
-					<h2>Rendering</h2>
-					<p>El proceso de visualización de los datos de OpenStreetMap se puede abordar desde una perspectiva vectorial o desde una perspectiva raster</p>
-					<p>Los servidores de OpenStreetMap ofrecen los mapas renderizados a traves de <em>Mapnik</em> en formato de <em>tiles raster</em> según varios estilos de visualización: <em>Mapnik, OpenCycleMap, OSM-WMS-Europe</em></p>
-					<center><div style=''>
-						<img style='float: left; width: 250px; height: 250px; margin-left: 10px; margin-right: 10px' src='img/osm.jpg'>
-						<img style='float: left; width: 250px; height: 250px; margin-right: 10px' src='img/osmwmseurope.jpg'>
-						<img style='float: left; width: 250px; height: 250px; margin-right: 10px' src='img/maonik.jpg'>
-					</div></center>
-				</section>
-
-				<section>
-					<h2>Tiles y niveles de Zoom</h2>
+					<h2>¿Cómo se accede a OpenStreetMap?</h2>
 					<p>
-
-						<a href='http://wiki.openstreetmap.org/wiki/Tiles' target='_blank'>Tiles</a><br/>
-						<a href='http://wiki.openstreetmap.org/wiki/Zoom_levels' target='_blank'>Niveles de zoom</a><br/>
-						<a href='http://wiki.openstreetmap.org/wiki/QuadTiles' target='_blank'>Esquema de tiles</a>
+						A través del navegador web, en la dirección:<br/>
+					<center><a href="http://openstreetmap.org">openstreetmap.org</a></center>	
 					</p>
+					<iframe width="1025" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-64.2,-25,71,64.1&amp;layer=mapnik" style="border: 1px solid black"></iframe>		
 				</section>
-				<!-- Edicion en la WEB-->
 				<section>
-					<h2>Editando OpenStreetMap desde la web</h2>
-					<p>Hay varios editores para elegir. Destacamos aquí:</p>
-					<ul>
-						<li><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch</a></li>
-						<li><a href="http://wiki.openstreetmap.org/wiki/ID">iD</a></li>
-					</ul>
-					<p>Podemos seleccionar el editor en la pestaña de preferencias de usuario o
-						bien con un parametro en la url al editar</p>
-						<a href="http://www.openstreetmap.org/edit?editor=id">http://www.openstreetmap.org/edit?editor=id</a>
+					<h2>Controles del mapa OpenStreetMap</h2>
+					<h3>Capa visible</h3>
+					<img width="1000" src="img/osmlayers.png" alt="osmlayers">
+				</section>
+				<section>
+					<h2>Controles del mapa OpenStreetMap</h2>
+					<h3>Compartir mapa</h3>
+					<img width="1000" src="img/osmshare.png" alt="osmshare">
+				</section>
+				<section>
+					<h2>Controles del mapa OpenStreetMap</h2>
+					<h3>Exportar datos vectoriales</h3>
+					<img width="1000" src="img/osmexport.png" alt="osmedit">
+				</section>
+				<section>
+					<h2>Controles del mapa OpenStreetMap</h2>
+					<h3>Editar</h3>
+					<img width="1000" src="img/osmedit.png" alt="osmedit">
 				</section>
 
-
-
-
-				<!-- Edicion de OSM con JOSM-->
+				<!-- 6.- Darse de alta como usuario -->
 				<section>
-					<h2>Editando OpenStreetMap con JOSM</h2>
-					<h4>http://josm.openstreetmap.de/</h4>
-					<a class="image" href="http://josm.openstreetmap.de/" target="_blank">
-						<img width="730" height="168" src="img/josm.png" alt="josm">
+					<h2>Darse de alta como usuario registrado de OpenStreetMap</h2>
+					<p>Para poder editar los mapas es necesario registrarse como usuario</p>
+					<a class="image" href="http://openstreetmap.org/" target="_blank">
+						<img width="730" src="img/alta.png" alt="josm">
+					</a>
+				</section>
+				<section>
+					<h2>Lista de correo en español de OpenStreetMap</h2>
+					<p><a href="https://lists.openstreetmap.org/listinfo/talk-es">https://lists.openstreetmap.org/listinfo/talk-es</a></p>
+					<a class="image" href="https://lists.openstreetmap.org/listinfo/talk-es" target="_blank"><img width="730" src="img/osmmail.png" alt="josm"></a>
+				</section>
+
+				<!-- Quién hace OpenStreetMap? -->
+				<section>
+					<h2>¿quién hace OpenStreetMap?</h2>
+					<p>1.800.000 usuarios registrados (650.000 más desde mayo 2013)</p>
+					<p>18.000.000.000 track points (6.000M más desde mayo 2013)</p>
+					<img src="img/users.png" alt='users' width='430' style='float:left; margin-right: 20px'>				
+					<img src="img/nodes.png" alt='nodes' width='430' style='float:left'>				
+				</section>
+				<section>
+					<a href="http://osmlab.github.io/show-me-the-way/">http://osmlab.github.io/show-me-the-way/</a>
+					<iframe width="1100" height='700' frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://osmlab.github.io/show-me-the-way/" style="border: 1px solid black"></iframe>
+				</section>
+
+				<section>
+					<h2>¿quién hace OpenStreetMap?</h2>
+					<p>
+						OpenStreetMap está construido con las aportaciones de miles de voluntarios 
+						repartidos por todo el mundo.
+					</p>
+					<iframe width="462" height="350" src="https://www.youtube.com/embed/4KjGxfSuw9s" frameborder="0" allowfullscreen></iframe>				
+				</section>
+
+				<!-- ¿Cómo se financia ? -->
+				<section>
+					<h2>¿Cómo se financia OpenStreetMap</h2>
+					<p>
+						Los fondos necesarios para el mantenimiento de los servidores y redes 
+						de comunicación salen de donaciones voluntarias de particulares y empresas
+					</p>
+					<a class="image" href="http://donate.openstreetmap.org/server2013/" target="_blank">
+						<img width="1020" height="292" src="img/support.png" alt="openstreetmap.org">
 					</a>
 				</section>
 
+				<!-- Material de apredizaje -->
 				<section>
-					<h3>JOSM : Atajos de teclado</h3>
+					<h2>Material de aprendizaje</h2>
+					<a href="http://learnosm.org">http://learnosm.org</a><br>
+					<img src="img/learnosm.png" alt='learnosm' width='750'>
+				</section>
+				<section>
+					<h3>Material de aprendizaje: libros</h3>
+					<div style='width: 900px'>
+						<img src="img/osmbook1.png" alt='osmbook1' width='255' style='float: left; margin-right: 20px'>
+						<img src="img/osmbook2.jpg" alt='osmbook1' width='270' style='float: left; margin-right: 20px'>
+						<img src="img/osmbook3.jpg" alt='osmbook1' width='270' style='float: left;'>
+					</div>
+				</section>
+
+
+				<!-- Edición de datos -->
+				<section>
+					<h3>Editar OpenStreetMap con JOSM</h3>
+					<p>JOSM proporciona herramientas de edición: descarga de datos, herramientas de dibujo, mapas de fondo para calcar, catálogos de etiquetas y subida de datos a los servidores de OSM</p>
+					<div style='margin-left: auto; margin-right: auto'><img src="img/josmdescarga2.png" alt="josmdescarga2" style="float:left; margin:10px; width: 700px"></div>
+				</section>
+				<section>
+					<h3>Plugins para JOSM</h3>
+					<p>Hay muchos complementos para JOSM. Se puede encontrar información de los mismos en:<br>
+						<a href="https://josm.openstreetmap.de/wiki/Plugins" target="_blank">https://josm.openstreetmap.de/wiki/Plugins</a>
+					</p>
+					<img src="img/josmplugins.png" alt='josmplugins' width='700'>
+				</section>
+				<section>
+					<h3>Edición GIS</h3>
 					<ul>
-						<li><strong>S</strong> : Modo seleccionar objetos</li>
-						<li><strong>A</strong> : Modo añadir, dibujar</li>
-						<li><strong>CTRL+DEL</strong> : Borrar elemento seleccionado</li>
-						<li><strong>Q</strong> : Ortogonalizar forma seleccionada</li>
-
+						<li>Información vectorial: osm2shp, osm2pgsl, Imposm, Osmosis, QGis, Geofabrik</li>
+						<li>Tiles raster: JTileDownloader, gvSIG</li>
 					</ul>
+					<div width='900'>
+						<img src="img/osmqgis.png" alt='osmqgis' width='430' style='float:left; margin-right: 20px'>
+						<img src="img/osmgvsig.png" alt='osmgvsig' width='430' style='float:left;'>
+					</div>
 				</section>
 
-
-				<!-- Merkaartor -->
+				<!-- Descarga de datos -->
 				<section>
-					<h2>Merkaartor: una alternativa para editar OSM</h2>
-					<a href="http://merkaartor.be/">http://merkaartor.be/</a>
-					<a class="image" href="http://merkaartor.be/" target="_blank">
-						<img width="730" src="img/merkaartor.png" alt="josm">
-					</a>
+					<h3>Descargas de datos: Planet OSM</h3>
+					<p>38 Gb (Nov 17, 2014)</p>
+					<img src="img/osmplanet.png" alt='osmplanet' width='750'>
+				</section>
+				<section>
+					<h3>Descargas de datos: Geofabrik</h3>
+					<p>Permite la descarga por continentes y paises</p>
+					<a href="http://download.geofabrik.de/">http://download.geofabrik.de/</a>
+					<img src="img/geofabrikdownload.png" alt='geofabrikdownload' width='750'>
+				</section>
+				
+				<!-- Utilidades -->
+				<section>
+					<h3>Geofabrik tools: Map</h3>
+					<a href="http://tools.geofabrik.de/map/">http://tools.geofabrik.de/map/</a>
+					<iframe width="1025" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://tools.geofabrik.de/map/" style="border: 1px solid black"></iframe>
+				</section>
+				<section>
+					<h3>Geofabrik tools: Map Compare</h3>
+					<a href="http://tools.geofabrik.de/mc/">http://tools.geofabrik.de/mc/</a>
+					<iframe width="1025" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://tools.geofabrik.de/mc/#14/9.5529/1.1934&num=2&mt0=mapnik&mt1=google-map" style="border: 1px solid black"></iframe>
+				</section>
+				<section>
+					<h3>Herramientas Geofabrik: OSM Inspector</h3>
+					<a href="http://tools.geofabrik.de/osmi/">http://tools.geofabrik.de/osmi/</a>
+					<iframe width="1025" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://tools.geofabrik.de/osmi" style="border: 1px solid black"></iframe>
+				</section>
+				<section>
+					<h3>Nominatim</h3>
+					<p>Nominatim (del Latín, 'por nombre') es una herramienta para buscar datos de OSM por nombre y dirección y generar direcciones sintéticas (geocoding inverso)</p>
+					<p>El portal de nominatim:<br>
+						<a href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a> 
+					</p>
+					<img src='img/nominatim.png' alt='nominatim' width='600'>
 				</section>
 
+				<!-- HOT -->
+				<section>
+					<h3>HOT: Humanitariam OpenStreetMap Team</h3>
+					<p>The Humanitarian OpenStreetMap Team [HOT] applies the principles of open source and open data sharing for humanitarian response and economic development.</p>
+					<img src="img/hot.png" alt='hot' width='750'>
+				</section>
+				<section>
+					<h3>HOT: 2014 West Africa Response</h3>
+					<img src="img/hotebola0.png" alt='hotebola0' width='750'>
+				</section>
+				<section>
+					<h3>HOT: 2014 OpenStreetMap activities for Ebola Response</h3>
+					<img src="img/hotebola1.png" alt='hotebola1' width='750'>
+				</section>
+				<section>
+					<h3>Material de aprendizaje: MapGive</h3>
+					<img src="img/mapgive.png" alt='mapgive' width='750'>
+				</section>
+				<section>
+					<h3>HOT: Material de aprendizaje</h3>
+					<a href="https://gist.github.com/meetar">https://gist.github.com/meetar</a>
+					<img src="img/hotlearn.png" alt='hotlearn' width='750'>
+				</section>
+				<section>
+					<h3>HOT: Material de aprendizaje</h3>
+					<small><a href="https://www.youtube.com/watch?v=HvH02nwB_X4&feature=youtu.be">https://www.youtube.com/watch?v=HvH02nwB_X4&feature=youtu.be</a></small>
+					<iframe width="554" height="415" src="https://www.youtube.com/embed/HvH02nwB_X4" frameborder="0" allowfullscreen></iframe>
+				</section>
 				<section>
 					<h1>THE END</h1>
 					<h3>BY Santiago Higuera / Geoinquietos Madrid</h3>
